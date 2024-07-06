@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    
+  </head>
+
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights">
+      <a-assets>
+         
+        
+        
+        <img id="btnball" src="./apple.jpg" crossorigin="anonymous">
+      </a-asset-item id="apple" src="./applw/scene.gltf">  
+   
+
+      </a-assets>
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable"></a-camera>
+
+      <a-entity id="example-target" mindar-image-target="targetIndex: 0">
+        
+        
+        <a-plane  height="0.552"; width= "1"; position="0 0 0" rotation="0 0 0" src=" #btnball"></a-plane> 
+         
+        <a-gltf-model position="0 0 0.1" rotation="0 0 0" scale="0.005 0.005 0.005" src="#apple" animation="property: position; to: 0 0.1 0.1; dur: 1000: easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+       
+      </a-entity> 
+    </a-scene>
+
+  
+  </body>
+</html>
