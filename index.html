@@ -23,9 +23,7 @@
       <a-entity id="example-target" mindar-image-target="targetIndex: 0">
         
         
-        <a-plane  height="0.552"; width= "1"; position="0 0 0" rotation="0 0 0" src=" #apple"></a-plane> 
-         
-        <a-gltf-model position="0 0 0.1" rotation="0 0 0" scale="0.005 0.005 0.005" src="#apple" animation="property: position; to: 0 0.1 0.1; dur: 1000: easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+        <a-entity position="0 0 0.1" rotation="0 0 0" scale="0.005 0.005 0.005" gltf-model="#apple" animation="property: position; to: 0 0.1 0.1; dur: 1000: easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
        
       </a-entity> 
     </a-scene>
